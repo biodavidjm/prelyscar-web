@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link REL="SHORTCUT ICON" HREF="http://tanto.bioengr.uic.edu/prelyscar/prelyscar.ico">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="keywords" content="prelyscar, lysine carboxylation, prediction, predictor, tool, computational, Jimenez-Morales, David, Acta D, bioe, Liang lab, uic, chicago">
+<meta name="description" content="Computational tool for the prediction of Lysine Carboxylation">
+<meta name="author" content="David Jimenez-Morales">
+<title>PreLysCar - Predictor of Lysine Carboxylation</title>
+
+<style type="text/css">
+<!--
+.style37 {font-size: 12px; color: #000066;}
+.style38 {font-size: 12px; color: #CCCCCC;}
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.style39 {
+	font-size: 36px;
+	font-weight: bold;
+}
+.style40 {
+	font-size: 12px;
+	font-style: italic;
+}
+.style41 {color: #FF0000}
+.style42 {font-size: 12px; color: #0099CC; }
+.style44 {color: #FFFFFF}
+.style46 {font-size: 9px}
+.style51 {color: #FF0000; font-weight: bold; }
+-->
+
+#This is CSS code for class dropt use in the help menu
+.caption{color:#000fff; text-align:center;}
+span.dropt span {position: absolute; left: -9999px;
+margin: 20px 0 0 0px; padding: 3px 3px 3px 3px;
+border-style:solid; border-color:black; border-width:1px; z-index: 6;}
+span.dropt:hover span {left: 40%; background: #ffffff;} 
+span.dropt span {position: absolute; left: -9999px;
+margin: 4px 0 0 0px; padding: 3px 3px 3px 3px; 
+border-style:solid; border-color:black; border-width:1px;}
+span.dropt:hover span {margin: 20px 0 0 170px; background: #ffffff; text-align:left;}
+</style>
+
+<!--Code for the waiting message -->
+<style type="text/css">
+#load{
+position:absolute;
+z-index:1;
+border:3px double #999;
+background:#f7f7f7;
+width:300px;
+height:300px;
+margin-top:-150px;
+margin-left:-150px;
+top:50%;
+left:50%;
+text-align:center;
+line-height:300px;
+font-family:"arial", verdana, Trebuchet MS,tahoma;
+font-size:18pt;
+}
+</style>
+
+
+<!-- Google reader -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26635029-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--Code for the waiting message -->
+<script type="text/javascript">
+var ray={
+ajax:function(st)
+	{
+		this.show('load');
+	},
+show:function(el)
+	{
+		this.getID(el).style.display='';
+	},
+getID:function(el)
+	{
+		return document.getElementById(el);
+	}
+}
+</script>
+
+
+</head>
+
+<body>
+<table width="600" border="0" align="center" cellpadding="0" cellspacing="5">
+  <tr>
+    <td>
+	<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="30%"><a href="http://www.uic.edu/uic/" target="_blank" class="style38 style41">University of Illinos at Chicago </a></td>
+        <td width="41%"><div align="center"><a href="http://gila.bioengr.uic.edu/lab/" target="_blank" class="style37">Jie Liang Lab</a></div></td>
+        <td width="30%"><div align="right"><a href="http://www.bioe.uic.edu/BIOE/WebHome" target="_blank" class="style42">Department of Bioengineering</a></div></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="70%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <th width="42%" scope="row"><div align="center"><img src="images/urease200.jpg" width="200" height="200" /></div></th>
+        <td width="58%"><span class="style39">PreLysCar<br />
+            <span class="style40"><strong>Pre</strong>dictor of <strong>Lys</strong>ine <strong>Car</strong>boxylation</span></span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="62%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td scope="row"><div align="left">
+          <p>Computational tool  for the prediction of lysine carboxylation.</p>
+          <p><strong>&gt; Input:</strong> protein 3D coordinates in <span class="style51">PDB format</span>.<br />
+            <strong>&gt; Output:</strong> lysine(s) residue(s) predicted as carboxylated.</p>
+        </div></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="75%" border="2" align="center" cellpadding="10" cellspacing="10" bordercolor="#006699" bgcolor="#CCCCFF">
+      <tr>
+        
+		<td width="100%" class="submit">
+			<b>INPUT DATA</b> <br>
+			<form enctype="multipart/form-data" action="goprelyscar.php" method="post" onsubmit="return ray.ajax()">
+				<blockquote>
+				  <p><i>Protein 3D coordinates (PDB format):</i><br>
+				    <input type="file" name="uppdb">
+				  </p>
+			      <p> <i>Choose a probability:</i>
+			        <SELECT name="prior">
+			          <OPTION value="0.5">0.5</OPTION>
+			          <OPTION value="0.05">0.05</OPTION>
+			          <OPTION selected value="0.009">0.009</OPTION>
+			          <OPTION value="0.0001">0.0001</OPTION>
+		            </SELECT>
+		              &nbsp;&nbsp;
+						<span class="dropt"><em><b><u>Help</u></b></em>
+							<span style="width:300px;">
+								<b>How to choose the prior probability</b><br />
+								> A prior of <b>0.5</b> represents that the carboxylation of 
+								lysine would have the same probability than a normal lysine,
+								which might result in more false positives (lysines incorrectly predicted as carboxylated).<br/>
+								>A prior of <b>0.0001</b> represents the opposite and less false positives should be expected<br/>
+								Our results with the training data set showed that <b>0.009</b> gave the best performance.							
+								</span>						
+						</span>				  
+				   </p> 
+		      	</blockquote>
+			    <p align="center"><br>
+				<div id="load" style="display:none;">Uploading: Please wait</div>
+		          <div align="center">
+		            <input type=submit value=submit>
+		            <br>
+	                  </p>
+              </div>
+			</form>		</td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td>	</td>
+  </tr>
+  <tr>
+    <td><table width="400" border="0" align="center">
+      <tr>
+        <td width="306" align="center"><strong>PreLysCar now <a href="http://www.ccp4.ac.uk/news/msg00205.html" target="_blank">available</a> at CCP4!</strong></td>
+      </tr>
+      <tr>
+        <td align="center"><img src="images/ccp4_logo.gif" width="203" height="80" alt=""/></td>
+      </tr>
+      <tr>
+        <td align="center"><span style="color: #2A5DC0"><strong><a href="http://www.ccp4.ac.uk/download/index.php" target="_blank">Download the last CCP4 version</a> to run PreLyscar locally</strong></span><strong>.</strong></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><blockquote>
+      <div align="center"><span class="style46">PreLysCar, website, and interface developed by <a href="http://gila.bioengr.uic.edu/~davidjm/" target="_blank">David Jimenez-Morales</a></span> <br />
+      <strong><a href="http://journals.iucr.org/d/issues/2014/01/00/lv5045/index.html" target="_blank" class="style42">Jimenez-Morales D, et.al. (2014). Acta Cryst. D 70, 48-57</a></strong><br />
+      <span class="style46"><a href='mailto:prelyscar@gmail.com?Subject=Comments about PreLysCar' target='_top'>Contact PreLysCar</a></span><br/>
+      </div>
+    </blockquote></td></tr>
+</table>
+
+</body>
+</html>
