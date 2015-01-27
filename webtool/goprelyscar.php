@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<link REL="SHORTCUT ICON" HREF="http://tanto.bioengr.uic.edu/prelyscar/prelyscar.ico">
+<link REL="SHORTCUT ICON" HREF="http://tanto.bioe.uic.edu/prelyscar/prelyscar.ico">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>PreLysCar - Predictor of Lysine Carboxylation</title>
 <style type="text/css">
@@ -59,7 +59,7 @@ ob_implicit_flush(1);
 <?php
 if (!isset($_SERVER['HTTP_REFERER']))
 {
-   echo "<meta http-equiv='refresh' content='0;url=http://tanto.bioengr.uic.edu/prelyscar/'>";
+   echo "<meta http-equiv='refresh' content='0;url=http://tanto.bioe.uic.edu/prelyscar/'>";
    exit;
    
 }
@@ -77,7 +77,7 @@ else
 	<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
       <tr>
         <td width="30%"><a href="http://www.uic.edu/uic/" target="_blank" class="style38 style41">University of Illinos at Chicago </a></td>
-        <td width="41%"><div align="center"><a href="http://gila.bioengr.uic.edu/lab/" target="_blank" class="style37">Jie Liang Lab</a></div></td>
+        <td width="41%"><div align="center"><a href="http://gila.bioe.uic.edu/lab/" target="_blank" class="style37">Jie Liang Lab</a></div></td>
         <td width="30%"><div align="right"><a href="http://www.bioe.uic.edu/BIOE/WebHome" target="_blank" class="style42">Department of Bioengineering</a></div></td>
       </tr>
     </table></td>
@@ -122,7 +122,7 @@ function errorfinish()
   <tr>
     <td>
 	<blockquote>
-      <div align='center'><span class='style46'>PreLysCar, website, and interface developed by <a href='http://gila.bioengr.uic.edu/~davidjm/' target='_blank'>David Jimenez-Morales</a></span> <br />
+      <div align='center'><span class='style46'>PreLysCar, website, and interface developed by <a href='http://gila.bioe.uic.edu/~davidjm/' target='_blank'>David Jimenez-Morales</a></span> <br />
       <strong>Jimenez-Morales D, et.al. (2014). Acta Cryst. D 70, 48-57.</strong><br />
       <span class='style46'><a href='mailto:prelyscar@gmail.com?Subject=Comments about PreLysCar' target='_top'>Contact PreLysCar</a></span><br/>
       </div>
@@ -238,7 +238,7 @@ $result = system($cmd);				#store output as result
   </tr>
   <tr>
     <td><blockquote>
-      <div align='center'><span class='style46'>PreLysCar, website, and interface developed by <a href='http://gila.bioengr.uic.edu/~davidjm/' target='_blank'>David Jimenez-Morales</a></span> <br />
+      <div align='center'><span class='style46'>PreLysCar, website, and interface developed by <a href='http://gila.bioe.uic.edu/~davidjm/' target='_blank'>David Jimenez-Morales</a></span> <br />
         <strong><a href="http://journals.iucr.org/d/issues/2014/01/00/lv5045/index.html" target="_blank" class="style42">Jimenez-Morales D, et.al. (2014). Acta Cryst. D 70, 48-57</a></strong><br />
       <span class='style46'><a href='mailto:prelyscar@gmail.com?Subject=Comments about PreLysCar' target='_top'>Contact PreLysCar</a></span><br/>
       </div>
