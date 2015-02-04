@@ -14,14 +14,19 @@
 .style38 {font-size: 12px; color: #CCCCCC;}
 body,td,th {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
+	font-size: 14px;
+}
+.descriptor{
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
 }
 .style39 {
-	font-size: 36px;
+	font-size: 50px;
 	font-weight: bold;
 }
 .style40 {
-	font-size: 12px;
+	font-size: 16px;
 	font-style: italic;
 }
 .style41 {color: #FF0000}
@@ -111,7 +116,7 @@ getID:function(el)
     </table></td>
   </tr>
   <tr>
-    <td><table width="70%" border="0" align="center" cellpadding="0" cellspacing="0">
+    <td><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
       <tr>
         <th width="42%" scope="row"><div align="center"><img src="images/urease200.jpg" width="200" height="200" /></div></th>
         <td width="58%"><span class="style39">PreLysCar<br />
@@ -120,10 +125,16 @@ getID:function(el)
     </table></td>
   </tr>
   <tr>
+    <td>
+      <div class="descriptor">Computational tool for the prediction of lysine carboxylation.</div>
+    
+    </td>
+  </tr>
+  <tr>
     <td><table width="62%" border="0" align="center" cellpadding="0" cellspacing="0">
       <tr>
-        <td scope="row"><div align="left">
-          <p>Computational tool  for the prediction of lysine carboxylation.</p>
+        <td scope="row">
+          <div align="left">
           <p><strong>&gt; Input:</strong> protein 3D coordinates in <span class="style51">PDB format</span>.<br />
             <strong>&gt; Output:</strong> lysine(s) residue(s) predicted as carboxylated.</p>
         </div></td>
