@@ -121,7 +121,7 @@ function errorfinish()
   <tr>
     <td>
 	<blockquote>
-      <div align='center'><span class='style46'>PreLysCar, website, and interface developed by <a href='http://gila.bioe.uic.edu/~davidjm/' target='_blank'>David Jimenez-Morales</a></span> <br />
+      <div align='center'><span class='style46'>PreLysCar, website, and interface developed by <a href='http://biodavidjm.github.io/' target='_blank'>David Jimenez-Morales</a></span> <br />
       <strong>Jimenez-Morales D, et.al. (2014). Acta Cryst. D 70, 48-57.</strong><br />
       <span class='style46'><a href='mailto:prelyscar@gmail.com?Subject=Comments about PreLysCar' target='_top'>Contact PreLysCar</a></span><br/>
       </div>
@@ -237,7 +237,7 @@ $result = system($cmd);				#store output as result
   </tr>
   <tr>
     <td><blockquote>
-      <div align='center'><span class='style46'>PreLysCar, website, and interface developed by <a href='http://gila.bioe.uic.edu/~davidjm/' target='_blank'>David Jimenez-Morales</a></span> <br />
+      <div align='center'><span class='style46'>PreLysCar, website, and interface developed by <a href='http://biodavidjm.github.io/' target='_blank'>David Jimenez-Morales</a></span> <br />
         <strong><a href="http://journals.iucr.org/d/issues/2014/01/00/lv5045/index.html" target="_blank" class="style42">Jimenez-Morales D, et.al. (2014). Acta Cryst. D 70, 48-57</a></strong><br />
       <span class='style46'><a href='mailto:prelyscar@gmail.com?Subject=Comments about PreLysCar' target='_top'>Contact PreLysCar</a></span><br/>
       </div>
