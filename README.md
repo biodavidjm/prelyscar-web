@@ -19,6 +19,23 @@ The **Pre**dictor of **Lys**ine **Car**boxylation is a tool developed to predict
 ### Updates
 `git pull`
 
+### Preventing access to .git folder
+In the `/etc/apache2/apache2.conf` configuration file, just add the following lines to prevent access to the .htaccess and the .git folder:
+
+```
+#
+# The following lines prevent .htaccess and .htpasswd files from being
+# viewed by Web clients.
+#
+<FilesMatch "^\.ht">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "^\.git">
+        Require all denied
+</FilesMatch>
+```
+
 # Monitoring
 
 [Uptimerobot](https://uptimerobot.com/)
